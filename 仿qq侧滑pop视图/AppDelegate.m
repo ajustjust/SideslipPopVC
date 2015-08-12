@@ -5,9 +5,9 @@
 //  Created by MAC-yanghua on 15/8/12.
 //  Copyright (c) 2015年 MAC-yanghua. All rights reserved.
 //
-
 #import "AppDelegate.h"
-
+#import "BasicNavigationController.h"
+#import "HomePageViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    HomePageViewController *homePageVC =[[HomePageViewController alloc]init];
+    BasicNavigationController *basicNav = [[BasicNavigationController alloc]initWithRootViewController:homePageVC];
+    self.window.rootViewController = basicNav;
+    
     return YES;
 }
 
