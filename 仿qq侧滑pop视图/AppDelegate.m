@@ -19,7 +19,10 @@
     
     HomePageViewController *homePageVC =[[HomePageViewController alloc]init];
     BasicNavigationController *basicNav = [[BasicNavigationController alloc]initWithRootViewController:homePageVC];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = basicNav;
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
